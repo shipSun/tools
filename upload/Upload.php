@@ -144,7 +144,7 @@ class Uploads {
         }
         return $this->error;
     }
-    public function debug($e=false){
+    protected function debug($e=false){
         $trace = debug_backtrace(FALSE);
         
         $str = '-------------------------文件上传开始---------------------------'.PHP_EOL;
