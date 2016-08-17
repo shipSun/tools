@@ -34,7 +34,11 @@ class Uploads {
     public function upload($file, $fileName=false){
         try{
             if(isset($file[0])){
-                $file = $file[0];
+                $file['name'] = $file[0]['name'];
+                $file['type'] = $file[0]['type'];
+                $file['size'] = $file[0]['size'];
+                $file['tmp_name'] = $file[0]['tmp_name'];
+                $file['error'] = $file[0]['error'];
             }
             $this->file = $file;
             
